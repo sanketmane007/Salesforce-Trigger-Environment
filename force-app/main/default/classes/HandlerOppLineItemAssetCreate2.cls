@@ -9,7 +9,7 @@ public with sharing class HandlerOppLineItemAssetCreate2{
             oppIds.add(oppValue.OpportunityId);
         }
 
-        List<Opportunity>    = [SELECT Id,Account.Name,AccountId
+        List<Opportunity>  oppList  = [SELECT Id,Account.Name,AccountId
                                     FROM Opportunity WHERE Id IN:oppIds ];
 
             if (!oppList.isEmpty()) {
